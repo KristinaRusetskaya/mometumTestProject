@@ -1,0 +1,360 @@
+@font-face {
+    font-family: 'BlinkMacSystemFontRegular';
+    src: url("../fonts/blinkMacSystemFontRegular.ttf");
+}
+
+@font-face {
+    font-family: 'BlinkMacSystemFontMedium';
+    src: url("../fonts/blinkMacSystemFontMedium.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'BlinkMacSystemFontRegular', sans-serif;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.momentum-location {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 10px 20px;
+}
+
+.momentum-search-block {
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 9px 0;
+    border-radius: 5px;
+    background-color: rgb(237, 237, 237);
+    left: 12px;
+    top: 12px;
+    box-sizing: border-box;
+    padding: 12px;
+    width: 95%;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1;
+}
+
+.momentum-search-input {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    width: 100%;
+    height: 25px;
+}
+
+.momentum-search-input::placeholder {
+    color: rgb(33, 33, 33);
+    opacity: 0.75;
+    font-size: 18px;
+}
+
+.momentum-search-input:focus {
+    outline: none;
+}
+
+.momentum-search-buttons {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.momentum-search-buttons svg {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.momentum-location-items {
+    cursor: pointer;
+
+}
+
+.momentum-weather {
+    align-items: center;
+    display: flex;
+}
+
+.momentum-weather-temperature {
+    margin-left: 6px;
+    color: white;
+    font-size: 26px;
+    line-height: 15px;
+}
+
+.momentum-city {
+    color: white;
+    margin-top: -7px;
+    font-size: 13px;
+    text-align: end;
+}
+
+.momentum-weather-list {
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    bottom: 20px;
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 5px 0;
+    right: 10px;
+    top: 80px;
+    padding: 20px;
+    color: rgb(33, 33, 33);
+    box-sizing: border-box;
+}
+
+.momentum-weather-list::after {
+    border: 7px solid transparent;
+    border-bottom-color: #FFF;
+    position: absolute;
+    bottom: 101%;
+    right: 20px;
+    content: '';
+}
+
+.momentum-weather-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.momentum-weather-location {
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    height: 25px;
+}
+
+.momentum-weather-location:hover > .icon-wrapper {
+    display: flex;
+}
+
+.momentum-weather-location-name {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.momentum-weather-conditions {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.icon-wrapper {
+    display: none;
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.icon-wrapper:hover {
+    background-color: #E4E3E3;
+}
+
+.momentum-weather-change-icon{
+    cursor: pointer;
+}
+
+.momentum-weather-section {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.momentum-weather-section-first {
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.momentum-weather-section-temperature {
+    font-size: 54px;
+    margin-left: 10px;
+}
+
+.momentum-weather-section-items {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.momentum-weather-section-item {
+    opacity: 0.6;
+}
+
+.momentum-clock {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 230px 0;
+    font-family: 'BlinkMacSystemFontMedium', sans-serif;
+}
+
+.momentum-clock-time {
+    font-size: 150px;
+}
+
+.momentum-clock-date {
+    font-size: 40px;
+}
+
+.momentum-tasks {
+    right: 20px;
+    bottom: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.momentum-tasks-button {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'BlinkMacSystemFontMedium', sans-serif;
+    cursor: pointer;
+}
+
+.momentum-tasks-list {
+    width: 320px;
+    height: auto;
+    background-color: white;
+    bottom: 20px;
+    position: relative;
+    right: -10px;
+    color: rgba(255, 255, 255, 0.98);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 5px 0;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.momentum-tasks-list::after {
+    border: 7px solid transparent;
+    border-top-color: #FFF;
+    position: absolute;
+    top: 101%;
+    right: 20px;
+    content: '';
+}
+
+.momentum-tasks-delete {
+    color: rgb(33, 33, 33);
+    font-size: 15px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+
+}
+
+.momentum-tasks-delete svg {
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.momentum-tasks-items {
+    padding: 60px 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.momentum-tasks-items.checkbox {
+    padding: 10px 20px;
+    align-items: start;
+    justify-content: start;
+    overflow-y: auto;
+    max-height: 650px;
+}
+
+.task-block {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.task-block:hover .task-delete {
+    display: block;
+}
+
+.task-checkbox-block {
+    display: flex;
+}
+
+.task-checkbox:checked +.task-text{
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.task-text {
+    margin-left: 7px;
+}
+
+.task-delete {
+    cursor: pointer;
+    display: none;
+}
+
+.momentum-tasks-text {
+    font-size: 14px;
+    color: rgb(33, 33, 33);
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+.momentum-tasks-add {
+    background-color: rgba(53, 115, 146, 0.95);
+    border: none;
+    padding: 8px 24px;
+    width: 135px;
+    align-self: center;
+    border-radius: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+.momentum-tasks-create {
+    padding: 0 21px 18px 21px;
+    display: flex;
+    flex-direction: column;
+}
+
+.momentum-tasks-input {
+    width: 100%;
+    font-size: 15px;
+    border: none;
+    display: none;
+}
+
+.momentum-tasks-input::placeholder {
+    color: rgb(33, 33, 33);
+    opacity: 0.75;
+}
+
+.momentum-tasks-input:focus {
+    outline: none;
+}
+
+.error-tasks-add {
+    color: red;
+    font-size: 10px;
+    text-align: start;
+    margin-bottom: 5px;
+    display: none;
+}
