@@ -29,9 +29,9 @@ export class Weather {
     }
 
     async init() {
-        this.weather = await getWeatherData('Москва');
+        this.weather = await getWeatherData('Краснодар');
 
-        this.createContent('Москва', this.weather);
+        this.createContent('Краснодар', this.weather);
 
     }
 
